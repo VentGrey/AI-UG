@@ -1,6 +1,7 @@
-use std::env;
+// Módulos usados
+mod mindist; //Módulo de minima distancia
+
 
 fn main() {
-    let args: Vec<String> = env::args().collect();
 
 }

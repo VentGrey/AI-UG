@@ -1,7 +1,11 @@
 [package]
-name = "AI-UG"
+name = "ai_ug"
 version = "0.1.0"
 authors = ["VentGrey <omarpurataf@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+csv = "1.0.5" # El .data posee un formato similar separado por comas.
+serde = "1.0.88" # mega-module para serializar estructuras de datos (Brujería)
+rand = "*" # Generación de números aleatorios
+time = "*" # Procesamiento del tiempo

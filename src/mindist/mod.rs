@@ -16,7 +16,7 @@ pub fn main() -> std::io::Result<()> {
     io::stdin().read_line(&mut entrada).expect("Fallo al leer desde teclado");
 
     //No permitir nombres de archivo vacíos
-    if entrada.len() <= 0 {
+    if entrada.len() == 0 {
         println!("Nombre de archivo inválido");
     }
 
@@ -40,7 +40,6 @@ fn euclid(e:Data, n:Data) -> f64 {
     // Return implícito
     dist
 }
-
 
 //-- Función de distancia Manhattan
 fn manhattan(e:Data, n:Data) -> f64 {

@@ -28,8 +28,13 @@ fn euclid(e:data, n:data) -> f64 {
     dist
 }
 
-fn manhattan() {
-    
+fn manhattan(e:data, n:data) -> f64 {
+    let mut dist:f64 = 0.0;
+
+    for i in 0..=5 {
+        dist += (e.carac[i] - n.carac[i]).abs();
+    }
+    dist
 }
 
 fn calc_cent() {

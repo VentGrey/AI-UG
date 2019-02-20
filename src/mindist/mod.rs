@@ -1,22 +1,35 @@
 use std::fs::File;
-use std::io::prelude::*;
 use std::f64;
+use std::io;
 
-struct data{
+
+struct Data{
     carac:[f64; 5],
     etiq: String,
 }
 
 pub fn main() -> std::io::Result<()> {
 
+    //Preguntar al usuario el nombre del archivo
+    let mut entrada = String::new();
+    println!("Ingrese el nombre del archivo a guardar");
+    io::stdin().read_line(&mut entrada).expect("Fallo al leer desde teclado");
+
+    //No permitir nombres de archivo vacíos
+    if entrada.len() <= 0 {
+        println!("Nombre de archivo inválido");
+    }
+
     // Crear el archivo donde se entregarán los datos clasificados
-    let mut file = File::create("Classsy.txt")?;
+    let mut archivo = File::create(entrada)?;
     Ok(())
     // La neta ya ni me acuerdo para que servía el Ok, pero si se lo quito
     // ya no jala :(
 }
 
-fn euclid(e:data, n:data) -> f64 {
+
+//-- Función de distancia euclidea
+fn euclid(e:Data, n:Data) -> f64 {
     let mut dist:f64 = 0.0;
 
     for i in 0..= 5 {
@@ -28,15 +41,21 @@ fn euclid(e:data, n:data) -> f64 {
     dist
 }
 
-fn manhattan(e:data, n:data) -> f64 {
+
+//-- Función de distancia Manhattan
+fn manhattan(e:Data, n:Data) -> f64 {
     let mut dist:f64 = 0.0;
 
     for i in 0..=5 {
         dist += (e.carac[i] - n.carac[i]).abs();
     }
+
+    // Otro return implícito
     dist
 }
 
-fn calc_cent() {
-
+//-- Función para calcular los centroides de cada "Cluster"
+fn calc_cent(elem:[Data;5]) {
+    
 }
+

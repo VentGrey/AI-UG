@@ -3,8 +3,6 @@
 
 use rand::prelude::*;
 
-const PATH: &str = "iris.data";
-
 //El archivo iris deberá estar en la raiz del proyecto
 
 const ent_filas: f64 = 0.50;
@@ -18,15 +16,9 @@ pub struct IrisPlant {
     sepal_width: f64,
     petal_length: f64,
     petal_width: f64,
-
-    // El artículo pone otros 3 parámetros, la neta no vienen en el .data
-    // pero voy a ver como puedo usarlos en el programa.
-    setosa: bool,
-    versicolour: bool,
-    virginica: bool,
 }
 
-pub fn main() {
+pub fn main(PATH:&str) {
     let mut iris_read = csv::Reader::from_reader(PATH).unwrap();
     /* FIXME: La nueva versión de csv eliminó la función "from_reader"
     a ver como le hago */

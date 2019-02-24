@@ -23,7 +23,7 @@ pub fn main(PATH: &str) {
     /* FIXME: La nueva versión de csv eliminó la función "from_reader"
     a ver como le hago */
 
-    let seed: &[_] = &[1, 2, 3, 4];
+    let seed: &[_] = &[1, 2];
     let mut rand: StdRng = SeedableRng::from_seed(seed);
 
     // FIXME: Error de tipos, ni idea, creo que mi arreglo está mal declarado
@@ -33,6 +33,14 @@ pub fn main(PATH: &str) {
             let iris_flower: IrisPlant = i.unwrap();
 
             println!("ls: {}", iris_flower.petal_length);
+        }
+    }
+    rand.reseed(seed);
+
+    for i in iris_read.decode() {
+        if rand.gen_range(0.0, 1.0) <= rows_train {
+            let iris_plant: IrisPlant = i.unwrap();
+            println!("ls: {}", iris_plant.petal_length);
         }
     }
 }

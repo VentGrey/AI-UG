@@ -55,6 +55,9 @@ fn manhattan(e:Data, n:Data) -> f64 {
 
 //-- Función para calcular los centroides de cada "Cluster"
 fn calc_cent(elem:[Data;5]) {
-    
+    let mut centroid: Data;
+    for i in elem.iter() {
+        
+    }
 }
 

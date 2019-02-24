@@ -8,5 +8,5 @@ edition = "2018"
 csv = "1.0.5" # El .data posee un formato similar separado por comas.
 serde = "1.0.88" # mega-module para serializar estructuras de datos (Brujería)
 rand = "0.6.5" # Generación de números aleatorios
-time = "*" # Procesamiento del tiempo
+time = "0.1.42" # Procesamiento del tiempo
 colored = "1.7" # Colores en terminal

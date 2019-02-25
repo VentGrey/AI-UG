@@ -3,6 +3,7 @@
 
 use rand::rngs::StdRng;
 use rand::{Rng, SeedableRng};
+use serde::{Serialize, Deserialize};
 //El archivo iris deberá estar en la raiz del proyecto
 
 const rows_train: f64 = 0.50;
@@ -11,6 +12,7 @@ const rows_train: f64 = 0.50;
 //TODO: Implementar ARC + STDGPU (La ejecucion sobre GPU debería ayudar)
 //TODO: Investigar cómo carajos hacer lo de arriba ^
 
+#[derive(Serialize)]
 pub struct IrisPlant {
     sepal_length: f64,
     sepal_width: f64,
@@ -20,8 +22,6 @@ pub struct IrisPlant {
 
 pub fn main(PATH: &str) {
     let mut iris_read = csv::Reader::from_reader(PATH.as_bytes());
-    /* FIXME: La nueva versión de csv eliminó la función "from_reader"
-    a ver como le hago */
 
     let seed: &[_] = &[1, 2];
     let mut rand: StdRng = SeedableRng::from_seed(seed);

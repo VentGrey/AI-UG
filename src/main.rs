@@ -5,6 +5,10 @@ mod knn; //Módulo "K-Nearest Neighbours" [EXPERIMENTAL]
 // Colores ANSI en terminal, para que el usuario no la riegue
 use colored::*;
 
+// Redundancia en el compilador pero pus a ver si jala con esto -_-
+extern crate serde;
+#[macro_use]
+extern crate serde_derive;
 
 // -- EXPERIMENTAL (Pase de parámetros por línea de comandos)
 // Parser de argumentos de línea de comandos

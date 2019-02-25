@@ -3,7 +3,9 @@
 
 use rand::rngs::StdRng;
 use rand::{Rng, SeedableRng};
-use serde::{Serialize, Deserialize};
+use serde::Serialize;
+use serde::Deserialize;
+
 //El archivo iris deberá estar en la raiz del proyecto
 
 const rows_train: f64 = 0.50;
@@ -12,7 +14,7 @@ const rows_train: f64 = 0.50;
 //TODO: Implementar ARC + STDGPU (La ejecucion sobre GPU debería ayudar)
 //TODO: Investigar cómo carajos hacer lo de arriba ^
 
-#[derive(Serialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct IrisPlant {
     sepal_length: f64,
     sepal_width: f64,

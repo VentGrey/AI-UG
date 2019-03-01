@@ -57,6 +57,7 @@ fn manhattan(e:Data, n:Data) -> f64 {
 fn calc_cent(elem:[Data;5]) {
     let mut centroid: Data;
     for i in elem.iter() {
+        
     }
 }
 

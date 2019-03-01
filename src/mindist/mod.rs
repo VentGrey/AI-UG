@@ -21,7 +21,7 @@ pub fn main() -> std::io::Result<()> {
     }
 
     // Crear el archivo donde se entregarán los datos clasificados
-    let mut archivo = File::create(entrada)?;
+    let archivo = File::create(entrada)?;
     Ok(())
     // La neta ya ni me acuerdo para que servía el Ok, pero si se lo quito
     // ya no jala :(

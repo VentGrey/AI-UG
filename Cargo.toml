@@ -13,5 +13,5 @@ serde_derive = "1"
 # Otra cosa porque el csv solo me hace un cagadero -_-
 
 rand = "0.7.2" # Generación de números aleatorios
-time = "0.1.42" # Procesamiento del tiempo
+time = "0.2.4" # Procesamiento del tiempo
 colored = "1.7" # Colores en terminal

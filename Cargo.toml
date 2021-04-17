@@ -12,6 +12,6 @@ serde = { version = "1.0", features = ["derive"] }
 serde_derive = "1"
 # Otra cosa porque el csv solo me hace un cagadero -_-
 
-rand = "0.7.2" # Generación de números aleatorios
+rand = "0.8.3" # Generación de números aleatorios
 time = "0.2.8" # Procesamiento del tiempo
 colored = "1.7" # Colores en terminal
